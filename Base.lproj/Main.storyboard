@@ -70,13 +70,14 @@
         <!--Yellow-->
         <scene sceneID="Tel-f5-6QI">
             <objects>
-                <viewController id="46q-jW-O8B" userLabel="Yellow" sceneMemberID="viewController">
+                <viewController id="46q-jW-O8B" userLabel="Yellow" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iY-H5-8Fz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CwR-Zu-97d"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="Lnh-0D-c3J"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWf-D9-V1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,13 +86,14 @@
         <!--Green-->
         <scene sceneID="YUl-CD-S6F">
             <objects>
-                <viewController id="CoW-nr-q2o" userLabel="Green" sceneMemberID="viewController">
+                <viewController id="CoW-nr-q2o" userLabel="Green" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ET9-PM-h2c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8pF-9j-UU4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="uQP-vj-A6q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEN-oU-hcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +119,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vui-IM-T5S"/>
-        <segue reference="GJr-lt-d2u"/>
+        <segue reference="IMg-Wd-zXu"/>
+        <segue reference="VkR-xk-kbz"/>
     </inferredMetricsTieBreakers>
 </document>

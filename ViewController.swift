@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet var segueSwitch: UISwitch!
     
     override func viewDidLoad() {
@@ -32,13 +31,9 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "popGreen", sender: nil)
         }
     }
-    
-    @IBAction func unwindToRed(unwindSegue: UIStoryboardSegue) {
-        
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        segue.destination.navigationItem.title = "What the hell?"
     }
 }
 
