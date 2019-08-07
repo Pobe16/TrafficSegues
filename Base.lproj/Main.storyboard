@@ -10,7 +10,7 @@
         <!--Red-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Red" id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,18 +59,20 @@
                         <outlet property="segueSwitch" destination="V62-lE-AzE" id="cCN-PQ-dZs"/>
                         <segue destination="46q-jW-O8B" kind="show" identifier="RedToYellow" id="VkR-xk-kbz"/>
                         <segue destination="CoW-nr-q2o" kind="show" identifier="RedToGreen" id="IMg-Wd-zXu"/>
+                        <segue destination="46q-jW-O8B" kind="presentation" identifier="popYellow" modalPresentationStyle="formSheet" id="GJr-lt-d2u"/>
+                        <segue destination="CoW-nr-q2o" kind="presentation" identifier="popGreen" modalPresentationStyle="formSheet" id="Vui-IM-T5S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow-->
         <scene sceneID="Tel-f5-6QI">
             <objects>
-                <viewController id="46q-jW-O8B" sceneMemberID="viewController">
+                <viewController id="46q-jW-O8B" userLabel="Yellow" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iY-H5-8Fz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CwR-Zu-97d"/>
@@ -80,12 +82,12 @@
             </objects>
             <point key="canvasLocation" x="1835" y="-182"/>
         </scene>
-        <!--View Controller-->
+        <!--Green-->
         <scene sceneID="YUl-CD-S6F">
             <objects>
-                <viewController id="CoW-nr-q2o" sceneMemberID="viewController">
+                <viewController id="CoW-nr-q2o" userLabel="Green" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ET9-PM-h2c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8pF-9j-UU4"/>
@@ -114,4 +116,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vui-IM-T5S"/>
+        <segue reference="GJr-lt-d2u"/>
+    </inferredMetricsTieBreakers>
 </document>

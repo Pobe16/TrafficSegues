@@ -15,16 +15,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
+    }    
+    
     @IBAction func yellowButtonTapped(_ sender: Any) {
         if segueSwitch.isOn {
             performSegue(withIdentifier: "RedToYellow", sender: nil)
+        } else {
+            performSegue(withIdentifier: "popYellow", sender: nil)
         }
     }
     
     @IBAction func redButtonTapped(_ sender: Any) {
         if segueSwitch.isOn {
             performSegue(withIdentifier: "RedToGreen", sender: nil)
+        } else {
+            performSegue(withIdentifier: "popGreen", sender: nil)
         }
     }
     
