@@ -14,23 +14,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V62-lE-AzE">
+                                <rect key="frame" x="182.5" y="432.5" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-sz-0pS">
+                                <rect key="frame" x="27" y="328" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="C29-uw-Riw"/>
+                                    <constraint firstAttribute="height" constant="40" id="Puh-ia-Xvf"/>
+                                </constraints>
+                                <state key="normal" title="Push to Yellow"/>
+                                <connections>
+                                    <action selector="yellowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r31-MR-4jy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdz-Uw-RJX">
+                                <rect key="frame" x="267" y="328" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YbE-a0-LhR"/>
+                                    <constraint firstAttribute="width" constant="120" id="ezm-yE-gSW"/>
+                                </constraints>
+                                <state key="normal" title="Push to Green"/>
+                                <connections>
+                                    <action selector="redButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVT-32-uuX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VfR-sz-0pS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="CcK-Xs-DwW"/>
+                            <constraint firstItem="jdz-Uw-RJX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="IAW-1b-yAh"/>
+                            <constraint firstItem="jdz-Uw-RJX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="120" id="Jbe-Uq-Hzb"/>
+                            <constraint firstItem="V62-lE-AzE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LQd-R6-Ezg"/>
+                            <constraint firstItem="V62-lE-AzE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nus-xG-orw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="VfR-sz-0pS" secondAttribute="centerX" constant="120" id="udV-E6-jhJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Red" largeTitleDisplayMode="always" id="Ufr-hO-xza">
                         <barButtonItem key="backBarButtonItem" title="Back to Red" id="BzT-R9-OB3"/>
-                        <barButtonItem key="rightBarButtonItem" title="Yellow" id="7Yg-e7-2j7">
-                            <connections>
-                                <segue destination="46q-jW-O8B" kind="show" id="sW9-M7-lVs"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segueSwitch" destination="V62-lE-AzE" id="cCN-PQ-dZs"/>
+                        <segue destination="46q-jW-O8B" kind="show" identifier="RedToYellow" id="VkR-xk-kbz"/>
+                        <segue destination="CoW-nr-q2o" kind="show" identifier="RedToGreen" id="IMg-Wd-zXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--Yellow-->
+        <!--View Controller-->
         <scene sceneID="Tel-f5-6QI">
             <objects>
                 <viewController id="46q-jW-O8B" sceneMemberID="viewController">
@@ -40,20 +75,12 @@
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CwR-Zu-97d"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Yellow" largeTitleDisplayMode="never" id="jhk-lQ-LXv">
-                        <barButtonItem key="backBarButtonItem" title="Back to Yellow" id="oCg-p2-CGY"/>
-                        <barButtonItem key="rightBarButtonItem" title="Green" id="fe2-bW-ygK">
-                            <connections>
-                                <segue destination="CoW-nr-q2o" kind="show" id="UZn-ch-qxd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWf-D9-V1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.753623188406" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1835" y="-182"/>
         </scene>
-        <!--Green-->
+        <!--View Controller-->
         <scene sceneID="YUl-CD-S6F">
             <objects>
                 <viewController id="CoW-nr-q2o" sceneMemberID="viewController">
@@ -63,19 +90,10 @@
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="8pF-9j-UU4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Green" id="0tb-64-349">
-                        <barButtonItem key="backBarButtonItem" title="Back to Green" id="sAb-ZS-AZR"/>
-                        <barButtonItem key="rightBarButtonItem" title="Restart?" id="ec5-RV-8Dh">
-                            <connections>
-                                <segue destination="Jdv-Kb-wbk" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="7io-JE-aH7"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEN-oU-hcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Jdv-Kb-wbk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2613.04347826087" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1835" y="486"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hRV-hF-EWP">
